@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import './App.css'
 
 import HamburgerCollapse from 'components/HamburgerCollapse'
+import HamburgerThreeDX from 'components/HamburgerThreeDX'
 
 class App extends Component {
   constructor(props) {
@@ -22,7 +23,7 @@ class App extends Component {
 
   render() {
     return (
-      <HamburgerCollapse
+      <HamburgerThreeDX
         isActive={this.state.isActive}
         toggleButton={this.toggleButton}
       />
