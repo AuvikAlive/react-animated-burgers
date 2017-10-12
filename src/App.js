@@ -43,11 +43,15 @@ class App extends Component {
         <HamburgerThreeDX
           isActive={this.state.isActiveThreeDX}
           toggleButton={this.toggleButtonThreeDX}
+          buttonColor="black"
+          barColor="red"
         />
 
         <HamburgerCollapse
           isActive={this.state.isActiveCollapse}
           toggleButton={this.toggleButtonCollapse}
+          buttonColor="black"
+          barColor="red"
         />
       </AppContainer>
     )
