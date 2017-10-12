@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import HamburgerCollapse from 'components/HamburgerCollapse'
 import HamburgerThreeDX from 'components/HamburgerThreeDX'
 import HamburgerThreeDY from 'components/HamburgerThreeDY'
+import HamburgerThreeDXY from 'components/HamburgerThreeDXY'
 
 const AppContainer = styled.div`
   width: 100vw;
@@ -18,13 +19,15 @@ class App extends Component {
     super(props)
 
     this.state = {
-      isActiveCollapse: false,
       isActiveThreeDX: false,
-      isActiveThreeDY: false
+      isActiveThreeDY: false,
+      isActiveThreeDXY: false,
+      isActiveCollapse: false
     }
 
     this.toggleButtonThreeDX = this.toggleButtonThreeDX.bind(this)
     this.toggleButtonThreeDY = this.toggleButtonThreeDY.bind(this)
+    this.toggleButtonThreeDXY = this.toggleButtonThreeDXY.bind(this)
     this.toggleButtonCollapse = this.toggleButtonCollapse.bind(this)
   }
 
@@ -37,6 +40,12 @@ class App extends Component {
   toggleButtonThreeDY() {
     this.setState({
       isActiveThreeDY: !this.state.isActiveThreeDY
+    })
+  }
+
+  toggleButtonThreeDXY() {
+    this.setState({
+      isActiveThreeDXY: !this.state.isActiveThreeDXY
     })
   }
 
@@ -59,6 +68,13 @@ class App extends Component {
         <HamburgerThreeDY
           isActive={this.state.isActiveThreeDY}
           toggleButton={this.toggleButtonThreeDY}
+          buttonColor="black"
+          barColor="red"
+        />
+
+        <HamburgerThreeDXY
+          isActive={this.state.isActiveThreeDXY}
+          toggleButton={this.toggleButtonThreeDXY}
           buttonColor="black"
           barColor="red"
         />
