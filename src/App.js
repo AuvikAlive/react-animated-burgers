@@ -1,32 +1,55 @@
 import React, { Component } from 'react'
-import './App.css'
+import styled from 'styled-components'
 
 import HamburgerCollapse from 'components/HamburgerCollapse'
 import HamburgerThreeDX from 'components/HamburgerThreeDX'
+
+const AppContainer = styled.div`
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+`
 
 class App extends Component {
   constructor(props) {
     super(props)
 
     this.state = {
-      isActive: false
+      isActiveCollapse: false,
+      isActiveThreeDX: false
     }
 
-    this.toggleButton = this.toggleButton.bind(this)
+    this.toggleButtonCollapse = this.toggleButtonCollapse.bind(this)
+    this.toggleButtonThreeDX = this.toggleButtonThreeDX.bind(this)
   }
 
-  toggleButton() {
+  toggleButtonCollapse() {
     this.setState({
-      isActive: !this.state.isActive
+      isActiveCollapse: !this.state.isActiveCollapse
+    })
+  }
+
+  toggleButtonThreeDX() {
+    this.setState({
+      isActiveThreeDX: !this.state.isActiveThreeDX
     })
   }
 
   render() {
     return (
-      <HamburgerThreeDX
-        isActive={this.state.isActive}
-        toggleButton={this.toggleButton}
-      />
+      <AppContainer>
+        <HamburgerThreeDX
+          isActive={this.state.isActiveThreeDX}
+          toggleButton={this.toggleButtonThreeDX}
+        />
+
+        <HamburgerCollapse
+          isActive={this.state.isActiveCollapse}
+          toggleButton={this.toggleButtonCollapse}
+        />
+      </AppContainer>
     )
   }
 }
