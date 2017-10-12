@@ -1,11 +1,32 @@
 import React, { Component } from 'react'
 import './App.css'
 
-import YourComponent from 'components/HamburgerButton'
+import HamburgerCollapse from 'components/HamburgerCollapse'
 
 class App extends Component {
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      isActive: false
+    }
+
+    this.toggleButton = this.toggleButton.bind(this)
+  }
+
+  toggleButton() {
+    this.setState({
+      isActive: !this.state.isActive
+    })
+  }
+
   render() {
-    return <YourComponent />
+    return (
+      <HamburgerCollapse
+        isActive={this.state.isActive}
+        toggleButton={this.toggleButton}
+      />
+    )
   }
 }
 
