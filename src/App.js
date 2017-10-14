@@ -14,6 +14,16 @@ const AppContainer = styled.div`
   align-items: center;
 `
 
+const BurgerContainer = styled.div`
+  width: 25vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+`
+
+const Label = styled.div`margin-top: 15px;`
+
 class App extends Component {
   constructor(props) {
     super(props)
@@ -58,33 +68,45 @@ class App extends Component {
   render() {
     return (
       <AppContainer>
-        <HamburgerThreeDX
-          isActive={this.state.isActiveThreeDX}
-          toggleButton={this.toggleButtonThreeDX}
-          buttonColor="black"
-          barColor="red"
-        />
+        <BurgerContainer>
+          <HamburgerThreeDX
+            isActive={this.state.isActiveThreeDX}
+            toggleButton={this.toggleButtonThreeDX}
+            buttonColor="#FFBC67"
+            barColor="white"
+          />
+          <Label>HamburgerThreeDX</Label>
+        </BurgerContainer>
 
-        <HamburgerThreeDY
-          isActive={this.state.isActiveThreeDY}
-          toggleButton={this.toggleButtonThreeDY}
-          buttonColor="black"
-          barColor="red"
-        />
+        <BurgerContainer>
+          <HamburgerThreeDY
+            isActive={this.state.isActiveThreeDY}
+            toggleButton={this.toggleButtonThreeDY}
+            buttonColor="#DA727E"
+            barColor="white"
+          />
+          <Label>HamburgerThreeDY</Label>
+        </BurgerContainer>
 
-        <HamburgerThreeDXY
-          isActive={this.state.isActiveThreeDXY}
-          toggleButton={this.toggleButtonThreeDXY}
-          buttonColor="black"
-          barColor="red"
-        />
+        <BurgerContainer>
+          <HamburgerThreeDXY
+            isActive={this.state.isActiveThreeDXY}
+            toggleButton={this.toggleButtonThreeDXY}
+            buttonColor="#AC6C82"
+            barColor="white"
+          />
+          <Label>HamburgerThreeDXY</Label>
+        </BurgerContainer>
 
-        <HamburgerCollapse
-          isActive={this.state.isActiveCollapse}
-          toggleButton={this.toggleButtonCollapse}
-          buttonColor="black"
-          barColor="red"
-        />
+        <BurgerContainer>
+          <HamburgerCollapse
+            isActive={this.state.isActiveCollapse}
+            toggleButton={this.toggleButtonCollapse}
+            buttonColor="#685C79"
+            barColor="white"
+          />
+          <Label>HamburgerCollapse</Label>
+        </BurgerContainer>
       </AppContainer>
     )
   }
