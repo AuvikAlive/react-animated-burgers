@@ -22,7 +22,8 @@ class App extends Component {
       isActiveMinus: false,
       isActiveSlider: false,
       isActiveSpin: false,
-      isActiveSpring: false
+      isActiveSpring: false,
+      isActiveStand: false
     }
 
     this.toggleButtonThreeDX = this.toggleButtonThreeDX.bind(this)
@@ -39,6 +40,7 @@ class App extends Component {
     this.toggleButtonSlider = this.toggleButtonSlider.bind(this)
     this.toggleButtonSpin = this.toggleButtonSpin.bind(this)
     this.toggleButtonSpring = this.toggleButtonSpring.bind(this)
+    this.toggleButtonStand = this.toggleButtonStand.bind(this)
   }
 
   toggleButtonThreeDX() {
@@ -122,6 +124,12 @@ class App extends Component {
   toggleButtonSpring() {
     this.setState({
       isActiveSpring: !this.state.isActiveSpring
+    })
+  }
+
+  toggleButtonStand() {
+    this.setState({
+      isActiveStand: !this.state.isActiveStand
     })
   }
 

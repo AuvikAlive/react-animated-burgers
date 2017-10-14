@@ -15,6 +15,7 @@ import HamburgerMinus from 'components/HamburgerMinus'
 import HamburgerSlider from 'components/HamburgerSlider'
 import HamburgerSpin from 'components/HamburgerSpin'
 import HamburgerSpring from 'components/HamburgerSpring'
+import HamburgerStand from 'components/HamburgerStand'
 
 import BurgerContainer from './BurgerContainer'
 
@@ -103,6 +104,12 @@ const burgers = [
     burgerComponent: HamburgerSpring,
     name: 'Spring',
     buttonColor: '#685C79',
+    barColor: 'white'
+  },
+  {
+    burgerComponent: HamburgerStand,
+    name: 'Stand',
+    buttonColor: '#455C7B',
     barColor: 'white'
   }
 ]
