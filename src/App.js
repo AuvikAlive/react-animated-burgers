@@ -24,7 +24,8 @@ class App extends Component {
       isActiveSpin: false,
       isActiveSpring: false,
       isActiveStand: false,
-      isActiveSqueeze: false
+      isActiveSqueeze: false,
+      isActiveVortex: false
     }
 
     this.toggleButtonThreeDX = this.toggleButtonThreeDX.bind(this)
@@ -43,6 +44,7 @@ class App extends Component {
     this.toggleButtonSpring = this.toggleButtonSpring.bind(this)
     this.toggleButtonStand = this.toggleButtonStand.bind(this)
     this.toggleButtonSqueeze = this.toggleButtonSqueeze.bind(this)
+    this.toggleButtonVortex = this.toggleButtonVortex.bind(this)
   }
 
   toggleButtonThreeDX() {
@@ -138,6 +140,12 @@ class App extends Component {
   toggleButtonSqueeze() {
     this.setState({
       isActiveSqueeze: !this.state.isActiveSqueeze
+    })
+  }
+
+  toggleButtonVortex() {
+    this.setState({
+      isActiveVortex: !this.state.isActiveVortex
     })
   }
 
