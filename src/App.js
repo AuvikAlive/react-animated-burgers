@@ -5,13 +5,15 @@ import HamburgerCollapse from 'components/HamburgerCollapse'
 import HamburgerThreeDX from 'components/HamburgerThreeDX'
 import HamburgerThreeDY from 'components/HamburgerThreeDY'
 import HamburgerThreeDXY from 'components/HamburgerThreeDXY'
+import HamburgerArrow from 'components/HamburgerArrow'
 
 const AppContainer = styled.div`
   width: 100vw;
   height: 100vh;
   display: flex;
-  justify-content: space-around;
+  flex-wrap: wrap;
   align-items: center;
+  align-content: center;
 `
 
 const BurgerContainer = styled.div`
@@ -22,7 +24,7 @@ const BurgerContainer = styled.div`
   align-items: center;
 `
 
-const Label = styled.div`margin-top: 15px;`
+const Label = styled.div`margin: 15px 0;`
 
 class App extends Component {
   constructor(props) {
@@ -32,13 +34,15 @@ class App extends Component {
       isActiveThreeDX: false,
       isActiveThreeDY: false,
       isActiveThreeDXY: false,
-      isActiveCollapse: false
+      isActiveCollapse: false,
+      isActiveArrow: false
     }
 
     this.toggleButtonThreeDX = this.toggleButtonThreeDX.bind(this)
     this.toggleButtonThreeDY = this.toggleButtonThreeDY.bind(this)
     this.toggleButtonThreeDXY = this.toggleButtonThreeDXY.bind(this)
     this.toggleButtonCollapse = this.toggleButtonCollapse.bind(this)
+    this.toggleButtonArrow = this.toggleButtonArrow.bind(this)
   }
 
   toggleButtonThreeDX() {
@@ -62,6 +66,12 @@ class App extends Component {
   toggleButtonCollapse() {
     this.setState({
       isActiveCollapse: !this.state.isActiveCollapse
+    })
+  }
+
+  toggleButtonArrow() {
+    this.setState({
+      isActiveArrow: !this.state.isActiveArrow
     })
   }
 
@@ -106,6 +116,16 @@ class App extends Component {
             barColor="white"
           />
           <Label>HamburgerCollapse</Label>
+        </BurgerContainer>
+
+        <BurgerContainer>
+          <HamburgerArrow
+            isActive={this.state.isActiveArrow}
+            toggleButton={this.toggleButtonArrow}
+            buttonColor="#455C7B"
+            barColor="white"
+          />
+          <Label>HamburgerArrow</Label>
         </BurgerContainer>
       </AppContainer>
     )
