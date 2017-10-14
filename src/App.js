@@ -6,6 +6,7 @@ import HamburgerThreeDX from 'components/HamburgerThreeDX'
 import HamburgerThreeDY from 'components/HamburgerThreeDY'
 import HamburgerThreeDXY from 'components/HamburgerThreeDXY'
 import HamburgerArrow from 'components/HamburgerArrow'
+import HamburgerArrowAlt from 'components/HamburgerArrowAlt'
 
 const AppContainer = styled.div`
   width: 100vw;
@@ -35,7 +36,8 @@ class App extends Component {
       isActiveThreeDY: false,
       isActiveThreeDXY: false,
       isActiveCollapse: false,
-      isActiveArrow: false
+      isActiveArrow: false,
+      isActiveArrowAlt: false
     }
 
     this.toggleButtonThreeDX = this.toggleButtonThreeDX.bind(this)
@@ -43,6 +45,7 @@ class App extends Component {
     this.toggleButtonThreeDXY = this.toggleButtonThreeDXY.bind(this)
     this.toggleButtonCollapse = this.toggleButtonCollapse.bind(this)
     this.toggleButtonArrow = this.toggleButtonArrow.bind(this)
+    this.toggleButtonArrowAlt = this.toggleButtonArrowAlt.bind(this)
   }
 
   toggleButtonThreeDX() {
@@ -72,6 +75,12 @@ class App extends Component {
   toggleButtonArrow() {
     this.setState({
       isActiveArrow: !this.state.isActiveArrow
+    })
+  }
+
+  toggleButtonArrowAlt() {
+    this.setState({
+      isActiveArrowAlt: !this.state.isActiveArrowAlt
     })
   }
 
@@ -126,6 +135,16 @@ class App extends Component {
             barColor="white"
           />
           <Label>HamburgerArrow</Label>
+        </BurgerContainer>
+
+        <BurgerContainer>
+          <HamburgerArrowAlt
+            isActive={this.state.isActiveArrowAlt}
+            toggleButton={this.toggleButtonArrowAlt}
+            buttonColor="#685C79"
+            barColor="white"
+          />
+          <Label>HamburgerArrowAlt</Label>
         </BurgerContainer>
       </AppContainer>
     )
