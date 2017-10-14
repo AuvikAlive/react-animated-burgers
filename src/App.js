@@ -8,6 +8,7 @@ import HamburgerThreeDXY from 'components/HamburgerThreeDXY'
 import HamburgerArrow from 'components/HamburgerArrow'
 import HamburgerArrowAlt from 'components/HamburgerArrowAlt'
 import HamburgerArrowTurn from 'components/HamburgerArrowTurn'
+import HamburgerBoring from 'components/HamburgerBoring'
 
 const AppContainer = styled.div`
   width: 100vw;
@@ -39,7 +40,8 @@ class App extends Component {
       isActiveCollapse: false,
       isActiveArrow: false,
       isActiveArrowAlt: false,
-      isActiveArrowTurn: false
+      isActiveArrowTurn: false,
+      isActiveBoring: false
     }
 
     this.toggleButtonThreeDX = this.toggleButtonThreeDX.bind(this)
@@ -49,6 +51,7 @@ class App extends Component {
     this.toggleButtonArrow = this.toggleButtonArrow.bind(this)
     this.toggleButtonArrowAlt = this.toggleButtonArrowAlt.bind(this)
     this.toggleButtonArrowTurn = this.toggleButtonArrowTurn.bind(this)
+    this.toggleButtonBoring = this.toggleButtonBoring.bind(this)
   }
 
   toggleButtonThreeDX() {
@@ -90,6 +93,12 @@ class App extends Component {
   toggleButtonArrowTurn() {
     this.setState({
       isActiveArrowTurn: !this.state.isActiveArrowTurn
+    })
+  }
+
+  toggleButtonBoring() {
+    this.setState({
+      isActiveBoring: !this.state.isActiveBoring
     })
   }
 
@@ -164,6 +173,16 @@ class App extends Component {
             barColor="white"
           />
           <Label>HamburgerArrowTurn</Label>
+        </BurgerContainer>
+
+        <BurgerContainer>
+          <HamburgerBoring
+            isActive={this.state.isActiveBoring}
+            toggleButton={this.toggleButtonBoring}
+            buttonColor="#AC6C82"
+            barColor="white"
+          />
+          <Label>HamburgerBoring</Label>
         </BurgerContainer>
       </AppContainer>
     )
