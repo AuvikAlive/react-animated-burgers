@@ -12,6 +12,7 @@ import HamburgerBoring from 'components/HamburgerBoring'
 import HamburgerElastic from 'components/HamburgerElastic'
 import HamburgerEmphatic from 'components/HamburgerEmphatic'
 import HamburgerMinus from 'components/HamburgerMinus'
+import HamburgerSlider from 'components/HamburgerSlider'
 
 import BurgerContainer from './BurgerContainer'
 
@@ -82,6 +83,12 @@ const burgers = [
     burgerComponent: HamburgerMinus,
     name: 'Minus',
     buttonColor: '#FFBC67',
+    barColor: 'white'
+  },
+  {
+    burgerComponent: HamburgerSlider,
+    name: 'Slider',
+    buttonColor: '#DA727E',
     barColor: 'white'
   }
 ]
