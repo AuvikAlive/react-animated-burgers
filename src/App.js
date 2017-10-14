@@ -7,6 +7,7 @@ import HamburgerThreeDY from 'components/HamburgerThreeDY'
 import HamburgerThreeDXY from 'components/HamburgerThreeDXY'
 import HamburgerArrow from 'components/HamburgerArrow'
 import HamburgerArrowAlt from 'components/HamburgerArrowAlt'
+import HamburgerArrowTurn from 'components/HamburgerArrowTurn'
 
 const AppContainer = styled.div`
   width: 100vw;
@@ -37,7 +38,8 @@ class App extends Component {
       isActiveThreeDXY: false,
       isActiveCollapse: false,
       isActiveArrow: false,
-      isActiveArrowAlt: false
+      isActiveArrowAlt: false,
+      isActiveArrowTurn: false
     }
 
     this.toggleButtonThreeDX = this.toggleButtonThreeDX.bind(this)
@@ -46,6 +48,7 @@ class App extends Component {
     this.toggleButtonCollapse = this.toggleButtonCollapse.bind(this)
     this.toggleButtonArrow = this.toggleButtonArrow.bind(this)
     this.toggleButtonArrowAlt = this.toggleButtonArrowAlt.bind(this)
+    this.toggleButtonArrowTurn = this.toggleButtonArrowTurn.bind(this)
   }
 
   toggleButtonThreeDX() {
@@ -81,6 +84,12 @@ class App extends Component {
   toggleButtonArrowAlt() {
     this.setState({
       isActiveArrowAlt: !this.state.isActiveArrowAlt
+    })
+  }
+
+  toggleButtonArrowTurn() {
+    this.setState({
+      isActiveArrowTurn: !this.state.isActiveArrowTurn
     })
   }
 
@@ -141,10 +150,20 @@ class App extends Component {
           <HamburgerArrowAlt
             isActive={this.state.isActiveArrowAlt}
             toggleButton={this.toggleButtonArrowAlt}
-            buttonColor="#685C79"
+            buttonColor="#FFBC67"
             barColor="white"
           />
           <Label>HamburgerArrowAlt</Label>
+        </BurgerContainer>
+
+        <BurgerContainer>
+          <HamburgerArrowTurn
+            isActive={this.state.isActiveArrowTurn}
+            toggleButton={this.toggleButtonArrowTurn}
+            buttonColor="#DA727E"
+            barColor="white"
+          />
+          <Label>HamburgerArrowTurn</Label>
         </BurgerContainer>
       </AppContainer>
     )
