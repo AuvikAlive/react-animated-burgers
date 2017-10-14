@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import styled from 'styled-components'
 
 import AppContainer from './AppContainer'
+import BurgerContainer from './BurgerContainer'
 
 import HamburgerCollapse from 'components/HamburgerCollapse'
 import HamburgerThreeDX from 'components/HamburgerThreeDX'
@@ -11,14 +12,6 @@ import HamburgerArrow from 'components/HamburgerArrow'
 import HamburgerArrowAlt from 'components/HamburgerArrowAlt'
 import HamburgerArrowTurn from 'components/HamburgerArrowTurn'
 import HamburgerBoring from 'components/HamburgerBoring'
-
-const BurgerContainer = styled.div`
-  width: 25vw;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-`
 
 const Label = styled.div`margin: 15px 0;`
 
