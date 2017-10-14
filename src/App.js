@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
 
+import AppContainer from './AppContainer'
+
 import HamburgerCollapse from 'components/HamburgerCollapse'
 import HamburgerThreeDX from 'components/HamburgerThreeDX'
 import HamburgerThreeDY from 'components/HamburgerThreeDY'
@@ -9,15 +11,6 @@ import HamburgerArrow from 'components/HamburgerArrow'
 import HamburgerArrowAlt from 'components/HamburgerArrowAlt'
 import HamburgerArrowTurn from 'components/HamburgerArrowTurn'
 import HamburgerBoring from 'components/HamburgerBoring'
-
-const AppContainer = styled.div`
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  align-content: center;
-`
 
 const BurgerContainer = styled.div`
   width: 25vw;
