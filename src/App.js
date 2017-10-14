@@ -18,7 +18,8 @@ class App extends Component {
       isActiveArrowTurn: false,
       isActiveBoring: false,
       isActiveElastic: false,
-      isActiveEmphatic: false
+      isActiveEmphatic: false,
+      isActiveMinus: false
     }
 
     this.toggleButtonThreeDX = this.toggleButtonThreeDX.bind(this)
@@ -31,6 +32,7 @@ class App extends Component {
     this.toggleButtonBoring = this.toggleButtonBoring.bind(this)
     this.toggleButtonElastic = this.toggleButtonElastic.bind(this)
     this.toggleButtonEmphatic = this.toggleButtonEmphatic.bind(this)
+    this.toggleButtonMinus = this.toggleButtonMinus.bind(this)
   }
 
   toggleButtonThreeDX() {
@@ -90,6 +92,12 @@ class App extends Component {
   toggleButtonEmphatic() {
     this.setState({
       isActiveEmphatic: !this.state.isActiveEmphatic
+    })
+  }
+
+  toggleButtonMinus() {
+    this.setState({
+      isActiveMinus: !this.state.isActiveMinus
     })
   }
 
