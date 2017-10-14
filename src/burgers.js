@@ -13,6 +13,7 @@ import HamburgerElastic from 'components/HamburgerElastic'
 import HamburgerEmphatic from 'components/HamburgerEmphatic'
 import HamburgerMinus from 'components/HamburgerMinus'
 import HamburgerSlider from 'components/HamburgerSlider'
+import HamburgerSpin from 'components/HamburgerSpin'
 
 import BurgerContainer from './BurgerContainer'
 
@@ -89,6 +90,12 @@ const burgers = [
     burgerComponent: HamburgerSlider,
     name: 'Slider',
     buttonColor: '#DA727E',
+    barColor: 'white'
+  },
+  {
+    burgerComponent: HamburgerSpin,
+    name: 'Spin',
+    buttonColor: '#AC6C82',
     barColor: 'white'
   }
 ]
