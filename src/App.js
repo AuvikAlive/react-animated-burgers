@@ -1,19 +1,8 @@
 import React, { Component } from 'react'
-import styled from 'styled-components'
 
 import AppContainer from './AppContainer'
-import BurgerContainer from './BurgerContainer'
 
-import HamburgerCollapse from 'components/HamburgerCollapse'
-import HamburgerThreeDX from 'components/HamburgerThreeDX'
-import HamburgerThreeDY from 'components/HamburgerThreeDY'
-import HamburgerThreeDXY from 'components/HamburgerThreeDXY'
-import HamburgerArrow from 'components/HamburgerArrow'
-import HamburgerArrowAlt from 'components/HamburgerArrowAlt'
-import HamburgerArrowTurn from 'components/HamburgerArrowTurn'
-import HamburgerBoring from 'components/HamburgerBoring'
-
-const Label = styled.div`margin: 15px 0;`
+import renderBurgerList from './burgers'
 
 class App extends Component {
   constructor(props) {
@@ -89,89 +78,7 @@ class App extends Component {
   }
 
   render() {
-    return (
-      <AppContainer>
-        <BurgerContainer>
-          <HamburgerThreeDX
-            isActive={this.state.isActiveThreeDX}
-            toggleButton={this.toggleButtonThreeDX}
-            buttonColor="#FFBC67"
-            barColor="white"
-          />
-          <Label>HamburgerThreeDX</Label>
-        </BurgerContainer>
-
-        <BurgerContainer>
-          <HamburgerThreeDY
-            isActive={this.state.isActiveThreeDY}
-            toggleButton={this.toggleButtonThreeDY}
-            buttonColor="#DA727E"
-            barColor="white"
-          />
-          <Label>HamburgerThreeDY</Label>
-        </BurgerContainer>
-
-        <BurgerContainer>
-          <HamburgerThreeDXY
-            isActive={this.state.isActiveThreeDXY}
-            toggleButton={this.toggleButtonThreeDXY}
-            buttonColor="#AC6C82"
-            barColor="white"
-          />
-          <Label>HamburgerThreeDXY</Label>
-        </BurgerContainer>
-
-        <BurgerContainer>
-          <HamburgerCollapse
-            isActive={this.state.isActiveCollapse}
-            toggleButton={this.toggleButtonCollapse}
-            buttonColor="#685C79"
-            barColor="white"
-          />
-          <Label>HamburgerCollapse</Label>
-        </BurgerContainer>
-
-        <BurgerContainer>
-          <HamburgerArrow
-            isActive={this.state.isActiveArrow}
-            toggleButton={this.toggleButtonArrow}
-            buttonColor="#455C7B"
-            barColor="white"
-          />
-          <Label>HamburgerArrow</Label>
-        </BurgerContainer>
-
-        <BurgerContainer>
-          <HamburgerArrowAlt
-            isActive={this.state.isActiveArrowAlt}
-            toggleButton={this.toggleButtonArrowAlt}
-            buttonColor="#FFBC67"
-            barColor="white"
-          />
-          <Label>HamburgerArrowAlt</Label>
-        </BurgerContainer>
-
-        <BurgerContainer>
-          <HamburgerArrowTurn
-            isActive={this.state.isActiveArrowTurn}
-            toggleButton={this.toggleButtonArrowTurn}
-            buttonColor="#DA727E"
-            barColor="white"
-          />
-          <Label>HamburgerArrowTurn</Label>
-        </BurgerContainer>
-
-        <BurgerContainer>
-          <HamburgerBoring
-            isActive={this.state.isActiveBoring}
-            toggleButton={this.toggleButtonBoring}
-            buttonColor="#AC6C82"
-            barColor="white"
-          />
-          <Label>HamburgerBoring</Label>
-        </BurgerContainer>
-      </AppContainer>
-    )
+    return <AppContainer>{renderBurgerList(this)}</AppContainer>
   }
 }
 
