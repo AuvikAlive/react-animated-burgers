@@ -1,0 +1,5 @@
+{
+  "private": true,
+  "name": "hamburger-emphatic",
+  "main": "./HamburgerEmphatic.js"
+}

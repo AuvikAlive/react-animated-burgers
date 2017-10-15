@@ -1,0 +1,5 @@
+{
+  "private": true,
+  "name": "hamburger-minus",
+  "main": "./HamburgerMinus.js"
+}
