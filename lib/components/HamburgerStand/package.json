@@ -1,5 +1,4 @@
 {
-  "private": true,
   "name": "hamburger-stand",
   "main": "./HamburgerStand.js"
 }

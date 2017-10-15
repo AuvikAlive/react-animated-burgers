@@ -1,5 +1,4 @@
 {
-  "private": true,
   "name": "hamburger-threedx",
   "main": "./HamburgerThreeDX.js"
 }

@@ -1,5 +1,4 @@
 {
-  "private": true,
   "name": "hamburger-spin",
   "main": "./HamburgerSpin.js"
 }

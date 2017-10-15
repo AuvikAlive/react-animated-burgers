@@ -1,5 +1,4 @@
 {
-  "private": true,
   "name": "hamburger-boring",
   "main": "./HamburgerBoring.js"
 }
