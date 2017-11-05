@@ -35,6 +35,18 @@ Pass in buttonColor & barColor string to change the color of the button & bars
 <HamburgerArrow isActive={this.state.isActive} toggleButton={this.toggleButton} buttonColor="#FFBC67" barColor="white" />
 ```
 
+Pass in buttonStyle prop for style overrides
+
+```
+<HamburgerArrow buttonStyle={{ backgroundColor: "#FFBC67" }} isActive={this.state.isActive} toggleButton={this.toggleButton} />
+```
+
+If you prefer using classes pass in className
+
+```
+<HamburgerArrow className="my-styles" isActive={this.state.isActive} toggleButton={this.toggleButton} />
+```
+
 Complete example app component
 
 ```
