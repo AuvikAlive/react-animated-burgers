@@ -137,7 +137,9 @@ const renderBurgerList = parent => {
       isActive: parent.state[`isActive${burgerName}`],
       toggleButton: parent[`toggleButton${burgerName}`],
       buttonColor: burger.buttonColor,
-      barColor: burger.barColor
+      barColor: burger.barColor,
+      buttonStyle: burger.buttonStyle,
+      className: burger.className
     })
 
     const LabelComponent = React.createElement(
