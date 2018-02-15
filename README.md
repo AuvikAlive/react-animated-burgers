@@ -5,11 +5,12 @@ Install the package
 ```
 npm i -S react-animated-burgers
 ```
+
 or
+
 ```
 yarn add react-animated-burgers
 ```
-
 
 Import the desired component, for example
 
@@ -79,3 +80,7 @@ class App extends Component {
 
 export default App
 ```
+
+## Acknowledgments
+
+* Based on Tasty CSS-animated Hamburgers https://jonsuh.com/hamburgers by Jonathan Suh
