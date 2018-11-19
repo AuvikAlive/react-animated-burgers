@@ -7,3 +7,5 @@ export const StyledBurgerContainer = styled.div`
   justify-content: space-around;
   align-items: center;
 `
+
+StyledBurgerContainer.displayName = 'StyledBurgerContainer'

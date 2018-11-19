@@ -8,3 +8,5 @@ export const StyledApp = styled.div`
   align-items: center;
   align-content: center;
 `
+
+StyledApp.displayName = 'StyledApp'
