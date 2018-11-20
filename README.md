@@ -55,17 +55,11 @@ import React, { Component } from 'react'
 import { HamburgerArrow } from 'react-animated-burgers'
 
 class App extends Component {
-  constructor(props) {
-    super(props)
-
-    this.state = {
-      isActive: false
-    }
-
-    this.toggleButton = this.toggleButton.bind(this)
+  state = {
+    isActive: false
   }
 
-  toggleButton() {
+  toggleButton = () => {
     this.setState({
       isActive: !this.state.isActive
     })
@@ -83,4 +77,4 @@ export default App
 
 ## Acknowledgments
 
-* Based on Tasty CSS-animated Hamburgers https://jonsuh.com/hamburgers by Jonathan Suh
+- Based on Tasty CSS-animated Hamburgers https://jonsuh.com/hamburgers by Jonathan Suh
