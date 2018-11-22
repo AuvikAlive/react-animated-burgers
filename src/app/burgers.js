@@ -18,30 +18,6 @@ import HamburgerVortex from 'components/HamburgerVortex'
 
 export const burgers = [
   {
-    Component: HamburgerThreeDX,
-    name: 'ThreeDX',
-    buttonColor: '#FFBC67',
-    barColor: 'white',
-  },
-  {
-    Component: HamburgerThreeDY,
-    name: 'ThreeDY',
-    buttonColor: '#DA727E',
-    barColor: 'white',
-  },
-  {
-    Component: HamburgerThreeDXY,
-    name: 'ThreeDXY',
-    buttonColor: '#AC6C82',
-    barColor: 'white',
-  },
-  {
-    Component: HamburgerCollapse,
-    name: 'Collapse',
-    buttonColor: '#685C79',
-    barColor: 'white',
-  },
-  {
     Component: HamburgerArrow,
     name: 'Arrow',
     buttonColor: '#455C7B',
@@ -63,6 +39,12 @@ export const burgers = [
     Component: HamburgerBoring,
     name: 'Boring',
     buttonColor: '#AC6C82',
+    barColor: 'white',
+  },
+  {
+    Component: HamburgerCollapse,
+    name: 'Collapse',
+    buttonColor: '#685C79',
     barColor: 'white',
   },
   {
@@ -111,6 +93,24 @@ export const burgers = [
     Component: HamburgerSqueeze,
     name: 'Squeeze',
     buttonColor: '#FFBC67',
+    barColor: 'white',
+  },
+  {
+    Component: HamburgerThreeDX,
+    name: 'ThreeDX',
+    buttonColor: '#FFBC67',
+    barColor: 'white',
+  },
+  {
+    Component: HamburgerThreeDY,
+    name: 'ThreeDY',
+    buttonColor: '#DA727E',
+    barColor: 'white',
+  },
+  {
+    Component: HamburgerThreeDXY,
+    name: 'ThreeDXY',
+    buttonColor: '#AC6C82',
     barColor: 'white',
   },
   {
