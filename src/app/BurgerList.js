@@ -17,6 +17,7 @@ export const BurgerList = props => (
       return (
         <StyledBurgerContainer key={index}>
           <Component
+            key={index}
             isActive={props[`isActive${name}`]}
             toggleButton={props.toggleButton(name)}
             {...{ buttonColor, barColor, buttonStyle, className }}
