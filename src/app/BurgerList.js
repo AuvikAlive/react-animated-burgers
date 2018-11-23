@@ -9,8 +9,9 @@ export const BurgerList = props => (
       const {
         Component,
         name,
-        buttonColor,
         barColor,
+        buttonColor,
+        buttonWidth,
         buttonStyle,
         className,
       } = burger
@@ -20,7 +21,7 @@ export const BurgerList = props => (
             key={index}
             isActive={props[`isActive${name}`]}
             toggleButton={props.toggleButton(name)}
-            {...{ buttonColor, barColor, buttonStyle, className }}
+            {...{ barColor, buttonColor, buttonWidth, buttonStyle, className }}
           />
           <StyledLabel>{name}</StyledLabel>
         </StyledBurgerContainer>

@@ -36,6 +36,12 @@ Pass in buttonColor & barColor string to change the color of the button & bars
 <HamburgerArrow isActive={this.state.isActive} toggleButton={this.toggleButton} buttonColor="#FFBC67" barColor="white" />
 ```
 
+Pass in buttonWidth number prop to change the size of the button. The width of the button will take as width value in px the passed in prop, button height & other properties will be calculated based on buttonWidth. Default buttonWidth is 40
+
+```
+<HamburgerArrow buttonWidth={50} isActive={this.state.isActive} toggleButton={this.toggleButton} />
+```
+
 Pass in buttonStyle prop for style overrides
 
 ```
