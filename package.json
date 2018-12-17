@@ -1,6 +1,6 @@
 {
   "name": "react-animated-burgers",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "main": "lib/index.js",
   "description": "Hamburger button components for React.js with animated state changes.",
   "keywords": [
@@ -70,7 +70,8 @@
   },
   "peerDependencies": {
     "react": "^16.0.0",
-    "react-dom": "^16.0.0"
+    "react-dom": "^16.0.0",
+    "styled-components": "^2.2.1"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
