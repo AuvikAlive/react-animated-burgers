@@ -1,6 +1,6 @@
 {
   "name": "react-animated-burgers",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "main": "lib/index.js",
   "description": "Hamburger button components for React.js with animated state changes.",
   "keywords": [
