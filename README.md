@@ -3,13 +3,13 @@
 Install the package
 
 ```
-npm i -S react-animated-burgers
+npm i -S react-animated-burgers styled-components
 ```
 
 or
 
 ```
-yarn add react-animated-burgers
+yarn add react-animated-burgers styled-components
 ```
 
 Import the desired component, for example
