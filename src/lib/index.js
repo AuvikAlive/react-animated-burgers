@@ -1,4 +1,4 @@
-import HamburgerArrow from './components/HamburgerArrow'
+import HamburgerArrow from './components/HamburgerArrow/HamburgerArrow'
 import HamburgerArrowReverse from './components/HamburgerArrowReverse'
 import HamburgerArrowAlt from './components/HamburgerArrowAlt'
 import HamburgerArrowAltReverse from './components/HamburgerArrowAltReverse'
