@@ -14,13 +14,15 @@ export const Button = props => {
     Lines,
     barColor,
     isActive,
+    ...rest
   } = props
 
   return (
     <StyledButton
       onClick={toggleButton}
-      {...{ buttonWidth, buttonColor, buttonStyle, className }}
       aria-label="Navigation"
+      {...{ buttonWidth, buttonColor, buttonStyle, className }}
+      {...rest}
     >
       <Box {...{ buttonWidth }}>
         <Lines {...{ buttonWidth, barColor, isActive }} />
