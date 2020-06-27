@@ -20,8 +20,8 @@
   "homepage": "https://AuvikAlive.github.io/react-animated-burgers",
   "dependencies": {},
   "peerDependencies": {
-    "react": "^16.7.0",
-    "react-dom": "^16.7.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
     "styled-components": "^4.1.3"
   },
   "devDependencies": {
@@ -29,8 +29,8 @@
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
-    "react": "^16.7.0",
-    "react-dom": "^16.7.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
     "react-scripts": "3.4.1",
     "styled-components": "^4.1.3"
   },
