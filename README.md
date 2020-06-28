@@ -54,7 +54,7 @@ If you prefer using classes pass in className
 <HamburgerArrow className="my-styles" isActive={this.state.isActive} toggleButton={this.toggleButton} />
 ```
 
-Complete example app component
+Example usage on Class components
 
 ```
 import React, { Component } from 'react'
@@ -76,6 +76,32 @@ class App extends Component {
         <HamburgerArrow isActive={this.state.isActive} toggleButton={this.toggleButton} buttonColor="#FFBC67" barColor="white" />
     )
   }
+}
+
+export default App
+```
+
+Example usage on Functional components
+
+```
+import React, { useState, useCallback } from 'react'
+import { HamburgerArrow } from 'react-animated-burgers'
+
+const App = () => {
+  const [isActive, setIsActive] = useState(false)
+
+  const toggleButton = useCallback(
+    () => setIsActive(prevState => !prevState),
+    [],
+  )
+
+  return (
+    <HamburgerArrow
+      buttonColor="#FFBC67"
+      barColor="white"
+      {...{ isActive, toggleButton }}
+    />
+  )
 }
 
 export default App

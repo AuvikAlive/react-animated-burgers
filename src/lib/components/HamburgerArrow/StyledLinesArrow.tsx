@@ -1,0 +1,25 @@
+import styled from 'styled-components'
+import { StyledLines } from '../StyledLines'
+import { getBarColor } from '../functions'
+
+export const StyledLinesArrow = styled(StyledLines)`
+  &::before {
+    ${({ isActive, buttonWidth }) =>
+      isActive &&
+      `transform: translate3d(${
+        -buttonWidth * 0.2
+      }px, 0, 0) rotate(-45deg) scale(0.7, 1)`};
+    ${getBarColor};
+  }
+  &::after {
+    ${({ isActive, buttonWidth }) =>
+      isActive &&
+      `transform: translate3d(${
+        -buttonWidth * 0.2
+      }px, 0, 0) rotate(45deg) scale(0.7, 1)`};
+    ${getBarColor};
+  }
+  ${getBarColor};
+`
+
+StyledLinesArrow.displayName = 'StyledLinesArrow'
